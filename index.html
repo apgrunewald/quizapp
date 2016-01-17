@@ -19,8 +19,8 @@
         <h1>The United States Capitals Quiz</h1>
       </div>
     </div>  <!-- Header -->
-
-	 <div class="row" id="intro" style="display: block">  <!-- Instructions Page -->
+	<button id="howButton">How to Play</button>
+	 <div class="row" id="intro" style="display: none">  <!-- Instructions Page -->
       <div class="col-md-12" id="instructions">
         <h2>How to Play</h2>
         <ol>
@@ -28,24 +28,19 @@
         	<li>Choose an answer</li>
         	<li>Click "Submit" to see if you got it right!</li>
         </ol>
-        <p>Ready? <button>Let's Play!</button></p>
+        <p>Ready? 
+        <button id="play">Let's Play!</button>
+        </p>
       </div>
     </div>  <!-- Instructions Page -->
 
-	<div class="row" id="correct" style="display: none">  <!-- Correct Message -->
+	<div class="row" id="feedback" style="display: none">  <!-- feedback message -->
       <div class="col-md-12">
-        <h2>Correct!</h2>
-        <p>Wow, you are so smart! <button>Next Question!</button></p>
+        <h2>feedback here</h2>
+        <button id="next" style="display: block">Next Question!</button>
+         <button id="again" style="display: none">Play Again!</button>
       </div>
-    </div>  <!-- Correct Message -->
-
-	<div class="row" id="wrong" style="display: none">  <!-- Wrong Message -->
-      <div class="col-md-12">
-        <h2>Wrong!</h2>
-        <p>Wow, what happened?! Didnt you memorize these in the 3rd grade? <button>Next Question!</button></p>
-      </div>
-    </div>  <!-- Wrong Message -->
-
+    </div>  <!-- feedback message -->
 
 	 <div class="row" id="infoArea" style="display: none"> <!-- Info area -->
 	    	 	<div class="col-md-8" id="question">
