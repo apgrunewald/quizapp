@@ -10,70 +10,65 @@
 	<script src="app.js"></script>
 </head>
 <body>
+<!-- Main Container -->
+  <div class="container" id="main"> 
 
-  <div class="container" id="main"> <!-- Main Container -->
-
-
-    <div class="row" id="header" style="display: block">  <!-- Header -->
+<!-- Header -->
+    <div class="row" id="header" style="display: block">  
       <div class="col-md-12" id="header">
         <h1>The United States Capitals Quiz</h1>
       </div>
-    </div>  <!-- Header -->
+    </div>  
+<!-- Header -->
 
-	 <div class="row" id="intro" style="display: block">  <!-- Instructions Page -->
-      <div class="col-md-12" id="instructions">
-        <h2>How to Play</h2>
-        <ol>
-        	<li>Read the question</li>
-        	<li>Choose an answer</li>
-        	<li>Click "Submit" to see if you got it right!</li>
-        </ol>
-        <p>Ready? <button>Let's Play!</button></p>
-      </div>
-    </div>  <!-- Instructions Page -->
-
-	<div class="row" id="correct" style="display: none">  <!-- Correct Message -->
-      <div class="col-md-12">
-        <h2>Correct!</h2>
-        <p>Wow, you are so smart! <button>Next Question!</button></p>
-      </div>
-    </div>  <!-- Correct Message -->
-
-	<div class="row" id="wrong" style="display: none">  <!-- Wrong Message -->
-      <div class="col-md-12">
-        <h2>Wrong!</h2>
-        <p>Wow, what happened?! Didnt you memorize these in the 3rd grade? <button>Next Question!</button></p>
-      </div>
-    </div>  <!-- Wrong Message -->
-
-
-	 <div class="row" id="infoArea" style="display: none"> <!-- Info area -->
-	    	 	<div class="col-md-8" id="question">
-	    	 	<h3></h3>
-	    	 	</div>
-	    	 	<div class="col-md-4" id="counter">
-	    	 	<h3></h3>
-	    	 	</div>
-	    </div> <!-- Info area -->
-
-
-     <div class="row" id="questionArea" style="display: none"> <!-- Question area -->
-	      <div class="col-md-8" id="flagImg"></div>
-	      <div class="col-md-4" id="choices">
-		      <form>
-	  			<input type="radio" name="capital"><br>
-	  			<input type="radio" name="capital"><br>
-	  			<input type="radio" name="capital">
-			</form> 
-			<button>Submit</button>
-		</div>
-    </div> <!-- Question area -->
-
-
-
-
-
-   </div> <!-- Main Container -->
 	
+<!-- Instructions Page -->
+<button id="howButton" style="display: block"> How to Play </button>
+	<div class="row" id="intro" style="display: none">
+	  <div class="col-md-8 col-md-offset-2" id="instructions">
+	    <h2>How to Play</h2>
+	    <ol>
+	      <li>Read the question</li>
+	      <li>Choose an answer</li>
+	      <li>Click "Submit" to see if you got it right!</li>
+	    </ol>
+	    <p>Ready?
+	      <button id="play">Let's Play!</button>
+	    </p>
+	  </div>
+	</div>
+<!-- Instructions Page -->
+
+<!-- Quiz Area -->	
+	<div class="col-md-8 col-md-offset-2" id="quizArea" style="display: none">
+		<h2 id="question"> What is the capital of California?</h2>
+		<img id="flagImg" src="images/cal.png">
+			<div id="choices" style="display: inline-block">
+			<input type="radio" name="capital" class="choice" value="0"> Sacramento <br>
+			<input type="radio" name="capital" class="choice" value="1"> San Francisco <br>
+			<input type="radio" name="capital" class="choice" value="2"> San Diego <br>
+			</div>
+		<button id="submit"> Submit!</button>
+		<p id="counter"> You are on question X of X </p>
+	</div>
+<!-- Quiz Area -->
+
+<!-- Feedback Message -->	
+	<div class="message" style="display: none">
+	<h2 id="feedback"> Wrong/Right!</h2>
+	<button id="nextQuestion"> Next Question!</button>
+	</div>
+
+	<div class="message" style="display: none">
+	<h2 id="end"> Thanks for Playing!</h2>
+	<p id="finalScore"> You got X out X questions! </p>
+	<button id="playAgain"> Play Again!</button>
+	</div>
+<!-- Feedback Message -->	
+
+
+
+   </div> 
+<!-- Main Container -->
 </body>
 </html>
